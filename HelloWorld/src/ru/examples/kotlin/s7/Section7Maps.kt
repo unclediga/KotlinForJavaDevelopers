@@ -39,6 +39,18 @@ fun main() {
 
     val (color2, name2, year2) = Car2("blue", "Toyota", 2008)
     println("Car2 (${color2}, ${name2}, ${year2})")
+
+
+    // Collections functions
+    println(mapOf.values) //[Car(color=blue, name=Hyundai, year=2010) ... year=2009)]
+    println(mapOf.keys)   // [1, 2, 3]
+
+    // Returns the first element matching the given predicate,
+    // or null if no such element was found.
+    println(mapOf.values.find { it.year == 2009 }) // Car(color=black, name=Ford, year=2009)
+    println(mapOf.count { it.value.year == 2009 }) // 2
+    println(mapOf.filter { it.value.year == 2009 }.map { it.value.color}) // [black, white]
+    // -- // --
 }
 
 // For data classes componentX() are implemented for free!
