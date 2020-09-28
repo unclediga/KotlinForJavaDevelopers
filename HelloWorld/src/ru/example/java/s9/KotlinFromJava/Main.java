@@ -5,5 +5,6 @@ import ru.examples.kotlin.s9.KotlinFromJava.StaticCar;
 public class Main {
     public static void main(String[] args) {
         StaticCar.topLevel();
+        StaticCar.print("print java string");
     }
 }
