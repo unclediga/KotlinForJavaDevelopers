@@ -7,6 +7,7 @@ public class Car {
     private String color;
     private String model;
     private int year;
+    private Object anObject;
 
     public Car(String color, String model, int year) {
         this.color = color;
@@ -39,6 +40,14 @@ public class Car {
         this.year = year;
     }
 
+    public Object getAnObject() {
+        return anObject;
+    }
+
+    public void setAnObject(Object anObject) {
+        this.anObject = anObject;
+    }
+
     @Override
     public String toString() {
         return "Car{" +
@@ -50,5 +59,17 @@ public class Car {
 
     public void throwException() throws Exception {
         throw new Exception("Test");
+    }
+
+    public void variableMethod(int num, String ... strings){
+        for (String string : strings) {
+            System.out.println(string);
+        }
+    }
+
+    public void wantsIntArray(int[] nums){
+        for (int num : nums) {
+            System.out.println("num " + num);
+        }
     }
 }
