@@ -1,9 +1,9 @@
 package ru.example.java.s9;
 
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 public class Car {
+    public static int x = 5;
     private String color;
     private String model;
     private int year;
@@ -13,6 +13,10 @@ public class Car {
         this.color = color;
         this.model = model;
         this.year = year;
+    }
+
+    public static String xString() {
+        return "x: " + x++;
     }
 
     public String getColor() {
@@ -71,5 +75,9 @@ public class Car {
         for (int num : nums) {
             System.out.println("num " + num);
         }
+    }
+
+    public void demoMethod(Runnable r){
+        new Thread(r).start();
     }
 }

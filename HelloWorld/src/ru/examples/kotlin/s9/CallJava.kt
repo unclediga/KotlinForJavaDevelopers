@@ -29,5 +29,11 @@ fun main() {
     car.wantsIntArray(intArrayOf(1,2,3))
 
     // if need java.lang.Object methods
-    (car.anObject as java.lang.Object).notify()
+ //   (car.anObject as java.lang.Object).notify()
+
+    println("x = ${Car.x}")
+    println(Car.xString())
+
+    // pass lambda
+    car.demoMethod({println("I'm in a thread!")})
 }
