@@ -4,44 +4,7 @@ import ru.example.java.s9.Car
 
 fun main() {
     var car = Car("blue","Ford",2015)
-
-    // No Errors
-    //car.model = null;
-
-    // No Errors
+    // Compile error: Kotlin: Val cannot be reassigned
     car.color ="green";
-
-    // RunTime Error
-    // Exception in thread "main" java.lang.IllegalArgumentException:
-    // Argument for @NotNull parameter 'color' of ru/example/java/s9/Car.setColor must not be null
-
-    //car.color = null;
-
-    /////////////////////
-    var model1 = car.model
-    println(model1.javaClass) // java.lang.String
-    // Compile error
-    //Kotlin: Null can not be a value of a non-null type String
-    //model1 = null
-    println(car)
-
-    var model2:String = car.model
-    println(model2.javaClass) // java.lang.String
-    // Compilation error:
-    // Kotlin: Null can not be a value of a non-null type String
-    model2 = null
-    println(model2)
-
-    var model3:String = car.model
-    // Compilation error:   because (?) - exclusively Kotlin class (String?:Any), not Java-class
-    //Kotlin: Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type String?
-    //println(model3.javaClass)
-
-    //Compile error
-    //Kotlin: Null can not be a value of a non-null type String
-    model3 = null
-
-    //Kotlin: Overload resolution ambiguity:
-    println(model3)
-
+    car.model = "Toyota"
 }
