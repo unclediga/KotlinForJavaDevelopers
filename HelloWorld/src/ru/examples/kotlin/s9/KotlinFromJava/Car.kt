@@ -8,6 +8,11 @@ class Car(color:String, @JvmField val model:String, val year:Int, val isAutomati
     set(value){
         field = "ever green!"
     }
+
+    companion object{
+        fun carComp() = println("I am in Car's companion object")
+        @JvmStatic fun carComp2() = println("I am in Car's companion object (2)")
+    }
 }
 
 fun String.print(){

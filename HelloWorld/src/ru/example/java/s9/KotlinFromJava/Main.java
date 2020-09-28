@@ -20,5 +20,7 @@ public class Main {
         System.out.println(car.getColor()); // "ever green!"
         System.out.println(car.isAutomatic());  // not getIsAutomatic() !
 
+        Car.Companion.carComp();
+        Car.carComp2();
     }
 }
