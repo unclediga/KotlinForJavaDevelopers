@@ -9,7 +9,10 @@ public class Main {
         StaticCar.print("print java string");
 
         final Car car = new Car("blue", "BMW", 2011, true);
-        System.out.println(car.getModel());
+
+        // System.out.println(car.getModel());   -> error
+        System.out.println(car.model);
+
         // Compile error: val color -> no setters
         // System.out.println(car.setModel());
         System.out.println(car.getColor());
