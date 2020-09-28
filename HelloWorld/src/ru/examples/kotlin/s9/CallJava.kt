@@ -20,20 +20,28 @@ fun main() {
     /////////////////////
     var model1 = car.model
     println(model1.javaClass) // java.lang.String
-    model1 = null
+    // Compile error
+    //Kotlin: Null can not be a value of a non-null type String
+    //model1 = null
     println(car)
 
     var model2:String = car.model
     println(model2.javaClass) // java.lang.String
     // Compilation error:
-    //model2 = null
+    // Kotlin: Null can not be a value of a non-null type String
+    model2 = null
     println(model2)
 
-    var model3:String? = car.model
+    var model3:String = car.model
     // Compilation error:   because (?) - exclusively Kotlin class (String?:Any), not Java-class
     //Kotlin: Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type String?
     //println(model3.javaClass)
+
+    //Compile error
+    //Kotlin: Null can not be a value of a non-null type String
     model3 = null
+
+    //Kotlin: Overload resolution ambiguity:
     println(model3)
 
 }

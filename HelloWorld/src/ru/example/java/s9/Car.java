@@ -22,7 +22,7 @@ public class Car {
         this.color = color;
     }
 
-    public String getModel() {
+    public @NotNull String getModel() {
         return model;
     }
 
