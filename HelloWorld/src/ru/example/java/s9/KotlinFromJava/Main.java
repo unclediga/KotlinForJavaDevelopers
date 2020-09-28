@@ -1,6 +1,7 @@
 package ru.example.java.s9.KotlinFromJava;
 
 import ru.examples.kotlin.s9.KotlinFromJava.Car;
+import ru.examples.kotlin.s9.KotlinFromJava.SingleObj;
 import ru.examples.kotlin.s9.KotlinFromJava.StaticCar;
 
 public class Main {
@@ -22,5 +23,8 @@ public class Main {
 
         Car.Companion.carComp();
         Car.carComp2();
+
+        SingleObj.INSTANCE.doSomething();
+        SingleObj.doSomething2();
     }
 }
