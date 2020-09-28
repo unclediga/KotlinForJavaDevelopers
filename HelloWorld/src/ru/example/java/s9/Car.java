@@ -5,7 +5,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class Car {
     private String color;
-    public String model;
+    private String model;
     private int year;
 
     public Car(String color, String model, int year) {
@@ -18,18 +18,18 @@ public class Car {
         return color;
     }
 
-//    public void setColor(@NotNull String color) {
-//        this.color = color;
-//    }
+    public void setColor(@NotNull String color) {
+        this.color = color;
+    }
 
     public @NotNull String getModel() {
         return model;
     }
 
-//    // If no any annotations - @Nullable is default
-//    public void setModel(@Nullable String model) {
-//        this.model = model;
-//    }
+    // If no any annotations - @Nullable is default
+    public void setModel(String model) {
+        this.model = model;
+    }
 
     public int getYear() {
         return year;
@@ -46,5 +46,9 @@ public class Car {
                 ", model='" + model + '\'' +
                 ", year=" + year +
                 '}';
+    }
+
+    public void throwException() throws Exception {
+        throw new Exception("Test");
     }
 }
