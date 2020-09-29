@@ -26,5 +26,11 @@ public class Main {
 
         SingleObj.INSTANCE.doSomething();
         SingleObj.doSomething2();
+
+        System.out.println("Companion object: as prop  isAuto = " + Car.Companion.isAuto());
+        System.out.println("Companion object: as field isAuto2  = " + Car.isAuto2);
+        System.out.println("Companion object: const = " + Car.constant);
+
+
     }
 }

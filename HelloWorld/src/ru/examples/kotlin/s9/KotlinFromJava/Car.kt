@@ -15,6 +15,9 @@ class Car(color:String, @JvmField val model:String, val year:Int, val isAutomati
     }
 
     companion object{
+        const val constant = 25
+        val isAuto = true
+        @JvmField val isAuto2 = true
         fun carComp() = println("I am in Car's companion object")
         @JvmStatic fun carComp2() = println("I am in Car's companion object (2)")
     }
