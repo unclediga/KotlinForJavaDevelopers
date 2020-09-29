@@ -4,6 +4,8 @@ import ru.examples.kotlin.s9.KotlinFromJava.Car;
 import ru.examples.kotlin.s9.KotlinFromJava.SingleObj;
 import ru.examples.kotlin.s9.KotlinFromJava.StaticCar;
 
+import java.io.IOException;
+
 public class Main {
     public static void main(String[] args) {
         StaticCar.topLevel();
@@ -38,7 +40,17 @@ public class Main {
         // Exception in thread "main" java.lang.NullPointerException:
         //   Parameter specified as non-null is null:
         //     method ru.examples.kotlin.s9.KotlinFromJava.Car.printMe, parameter text
-        car.printMe(null);
+        //car.printMe(null);
+
+        // Java don't requires try-catch block
+        StaticCar.doIO();
+
+        // try-catch block is required !
+        try {
+            StaticCar.doIO2();
+        } catch (IOException e) {
+            System.out.println("IOException");;
+        }
 
     }
 }

@@ -1,7 +1,20 @@
 @file:JvmName("StaticCar")
 package ru.examples.kotlin.s9.KotlinFromJava
 
+import java.io.IOException
+
 fun topLevel() = println("I am in the Car file!")
+
+fun doIO(){
+    throw IOException()
+}
+
+@Throws(IOException::class)
+fun doIO2(){
+    throw IOException()
+}
+
+
 
 object SingleObj{
     fun doSomething() = println("doing something from Singleton object")
