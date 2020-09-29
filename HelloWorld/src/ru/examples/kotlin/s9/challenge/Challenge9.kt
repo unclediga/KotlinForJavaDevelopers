@@ -5,12 +5,13 @@ import ru.example.java.s9.challenge.Employee
 fun main() {
     val emp = Employee("Jane", "Smith", 2000)
 
-    // Cannot access 'lastName': it is private in 'Employee'
-    // fix it!
+    // need both set and get methods for using dot-notation in Kotlin
     emp.lastName = "Jones"
 
-    //Cannot access 'salaryLast3Years': it is private in 'Employee'
-    //Type mismatch: inferred type is Array<Double> but FloatArray! was expected
-    // fix it!
-    emp.salaryLast3Years = arrayOf(50000.01, 52000.40, 56000.60)
+    //add both set and get methods for using dot-notation
+    //change type Array<Double> -> Array<Float> and cast to  array of primitive float
+    // var 1
+    emp.salaryLast3Years = arrayOf(50000.01f, 52000.40f, 56000.60f).toFloatArray()
+    // var 2
+    emp.salaryLast3Years = floatArrayOf(50000.01f, 52000.40f, 56000.60f)
 }
