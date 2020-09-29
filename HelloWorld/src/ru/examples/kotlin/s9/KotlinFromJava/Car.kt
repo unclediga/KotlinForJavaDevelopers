@@ -14,6 +14,19 @@ fun doIO2(){
     throw IOException()
 }
 
+// for Java will be generated exactly one signature: with 2 args
+//    - void defaultArgs(String text, int num)
+fun defaultArgs(text: String, num: Int = 25){
+}
+
+// for Java will be generated two signatures
+//   - void defaultArgs(String text, int num)
+//   - void defaultArgs(String text)
+
+@JvmOverloads
+fun defaultArgs2(text: String, num: Int = 25){
+    println("num = $num")
+}
 
 
 object SingleObj{

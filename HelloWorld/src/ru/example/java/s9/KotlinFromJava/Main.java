@@ -42,15 +42,26 @@ public class Main {
         //     method ru.examples.kotlin.s9.KotlinFromJava.Car.printMe, parameter text
         //car.printMe(null);
 
-        // Java don't requires try-catch block
-        StaticCar.doIO();
+//        // Java don't requires try-catch block
+//        StaticCar.doIO();
+//
+//        // try-catch block is required !
+//        try {
+//            StaticCar.doIO2();
+//        } catch (IOException e) {
+//            System.out.println("IOException");;
+//        }
 
-        // try-catch block is required !
-        try {
-            StaticCar.doIO2();
-        } catch (IOException e) {
-            System.out.println("IOException");;
-        }
+
+        //Compile error;
+        // 'defaultArgs(java.lang.String, int)' in 'ru.examples.kotlin.s9.KotlinFromJava.StaticCar'
+        //  cannot be applied to '(java.lang.String)'
+        StaticCar.defaultArgs("Test");
+
+        // No errors
+        StaticCar.defaultArgs("Test", 100500);
+        StaticCar.defaultArgs2("Test");
+        StaticCar.defaultArgs2("Test", 100500);
 
     }
 }
