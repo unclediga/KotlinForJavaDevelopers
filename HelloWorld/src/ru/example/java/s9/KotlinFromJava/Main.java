@@ -56,7 +56,7 @@ public class Main {
         //Compile error;
         // 'defaultArgs(java.lang.String, int)' in 'ru.examples.kotlin.s9.KotlinFromJava.StaticCar'
         //  cannot be applied to '(java.lang.String)'
-        StaticCar.defaultArgs("Test");
+//        StaticCar.defaultArgs("Test");
 
         // No errors
         StaticCar.defaultArgs("Test", 100500);
