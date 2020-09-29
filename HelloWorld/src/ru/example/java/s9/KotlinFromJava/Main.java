@@ -31,6 +31,14 @@ public class Main {
         System.out.println("Companion object: as field isAuto2  = " + Car.isAuto2);
         System.out.println("Companion object: const = " + Car.constant);
 
+        // IDEA Warning:
+        // Warning:(39, 21) Passing 'null' argument to parameter annotated as @NotNull
+        // But if you still run the program, Compiler injects null-checking
+        // Runtime error:
+        // Exception in thread "main" java.lang.NullPointerException:
+        //   Parameter specified as non-null is null:
+        //     method ru.examples.kotlin.s9.KotlinFromJava.Car.printMe, parameter text
+        car.printMe(null);
 
     }
 }

@@ -21,6 +21,10 @@ class Car(color:String, @JvmField val model:String, val year:Int, val isAutomati
         fun carComp() = println("I am in Car's companion object")
         @JvmStatic fun carComp2() = println("I am in Car's companion object (2)")
     }
+
+    fun printMe(text: String){
+        println("I don't expect a null value: ${text}")
+    }
 }
 
 fun String.print(){
